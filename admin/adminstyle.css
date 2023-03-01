@@ -1,0 +1,149 @@
+:root {
+  --main-color: #8e44ad;
+  --black: #222;
+  --white: #fff;
+  --light-black: #777;
+  --light-white: #fff9;
+}
+body {
+  background: #8e44ad;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000, #8e44ad, #000);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+section .content {
+  position: absolute;
+  height: 500px;
+  width: 90%;
+  background: #222;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+  border-radius: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+section .content1 {
+  position: absolute;
+  height: 600px;
+  width: 90%;
+  background: #222;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+  border-radius: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.content h2 {
+  color: var(--main-color);
+  position: relative;
+  bottom: 80px;
+}
+
+.content1 h2 {
+  color: var(--main-color);
+  position: relative;
+  bottom: 120px;
+}
+.table {
+  width: 900px;
+  font-size: 20px;
+  position: relative;
+  bottom: 44px;
+  height: 180px;
+}
+.table th {
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: var(--black);
+  text-align: center;
+  margin: 5px;
+  padding: 22px;
+}
+.table tr td ,a{
+  text-transform: capitalize;
+  color: var(--main-color);
+  text-align: center;
+  border-radius: 2px var(--black);
+  padding: 10px;
+  text-decoration: none;
+}
+.table1 {
+  width: 520px;
+  font-size: 23px;
+  height: 180px;
+}
+.table1 th {
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: var(--black);
+  text-align: center;
+  padding: 5px;
+}
+.table1 tr td {
+  text-transform: capitalize;
+  color: var(--main-color);
+  text-align: center;
+  border-radius: 2px var(--black);
+  padding: 10px;
+  padding: 20px;
+}
+.usertable {
+  position: relative;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 30px auto;
+}
+.usertable .btn {
+  background-color: var(--black);
+  border: #222;
+}
+.btn a:hover {
+  background-color: var(--main-color);
+  border: var(--white);
+  color: var(--black);
+}
+.btn a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--main-color);
+}
